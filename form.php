@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="id">
+<!DOCTYPE php>
+<php lang="id">
 <head>
     <meta charset="UTF-8">
     <title>Form Data Mahasiswa</title>
@@ -85,4 +85,4 @@
 </form>
 
 </body>
-</html>
+</php>

@@ -1,4 +1,4 @@
-<html>
+<php>
     <head>
         <title>
             WEBSITE DWI - 2026
@@ -6,9 +6,9 @@
     </head>
     <body>
         <nav>
-            <li><a href="index.html">index</a></li>
-            <li><a href="profil.html">profil</a></li>
-            <li><a href="cita-cita.html">cita-cita</a></li>
+            <li><a href="index.php">index</a></li>
+            <li><a href="profil.php">profil</a></li>
+            <li><a href="cita-cita.php">cita-cita</a></li>
             </nav>
             <h1>
                 <h2>
@@ -50,4 +50,4 @@
 
         </nav>
     </body>
-</html>
+</php>

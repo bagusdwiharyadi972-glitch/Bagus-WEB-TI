@@ -1,4 +1,4 @@
-<html>
+<php>
     <head>
         <title>
             WEB TI DWI - 2026
@@ -6,24 +6,24 @@
     </head>
     <body>
         <nav>
-            <li><a href="index.html">index</a></li>
-            <li><a href="profil.html">profil</a></li>
-            <li><a href="cita-cita.html">cita-cita</a></li>
+            <li><a href="index.php">index</a></li>
+            <li><a href="profil.php">profil</a></li>
+            <li><a href="cita-cita.php">cita-cita</a></li>
             </nav>
         <h1 align="center">
             WEB TI DWI - 2026
             <table border="1" align="center" cellspacing="0" cellpadding="10px">
                 <tr>
                     <td>
-                        <a href="index.html">home</a>
+                        <a href="index.php">home</a>
                     </td>
                     <td>
-                        <a href="profile.html">profile</a>
+                        <a href="profile.php">profile</a>
                     </td>
                     <td>
-                        <a href="contact.html">contact</a>
+                        <a href="contact.php">contact</a>
                         <td>
-                        <a href="mahasiswa.html">DATA MAHASISWA</a>
+                        <a href="mahasiswa.php">DATA MAHASISWA</a>
                     </td>
                 </tr>
             </table>
@@ -58,4 +58,4 @@
              </p>
         </h1>
     </body>
-</html>
+</php>
