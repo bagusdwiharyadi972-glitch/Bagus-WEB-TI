@@ -102,6 +102,21 @@ $query = mysqli_query($conn, "SELECT * FROM mahasiswa");
             background:#e0a800;
         }
 
+        .btn-hapus{
+            background:#dc3545;
+            color:white;
+            border:none;
+            padding:6px 12px;
+            border-radius:4px;
+            cursor:pointer;
+            font-weight:bold;
+            margin-left:4px;
+        }
+
+        .btn-hapus:hover{
+            background:#c82333;
+        }
+
         /* Modal */
         .modal{
             display:none;
@@ -232,7 +247,13 @@ while($data=mysqli_fetch_array($query))
 <td><?= $data['no_hp']; ?></td>
 
 <td>
-    <img src="assets/img/<?= $data['foto']; ?>">
+    <?php if ($data['foto']): ?>
+        <?php $foto_path = 'foto/' . $data['foto']; ?>
+        <?php $cache_buster = file_exists($foto_path) ? '?v=' . filemtime($foto_path) : ''; ?>
+        <img src="<?= $foto_path . $cache_buster; ?>">
+    <?php else: ?>
+        No Photo
+    <?php endif; ?>
 </td>
 
 <td>
@@ -244,6 +265,10 @@ while($data=mysqli_fetch_array($query))
         data-email="<?= $data['email'] ?>"
         data-no_hp="<?= $data['no_hp'] ?>"
         onclick="editData(this)">Edit</button>
+    <button class="btn-hapus"
+        data-nim="<?= $data['nim'] ?>"
+        data-nama="<?= $data['nama'] ?>"
+        onclick="hapusData(this)">Hapus</button>
 </td>
 
 </tr>
@@ -295,6 +320,14 @@ while($data=mysqli_fetch_array($query))
 
     function tutupModal() {
         document.getElementById('modalEdit').style.display = 'none';
+    }
+
+    function hapusData(btn) {
+        var nim  = btn.getAttribute('data-nim');
+        var nama = btn.getAttribute('data-nama');
+        if (confirm('Are you sure you want to delete this student?')) {
+            window.location = 'hapusdata.php?nim=' + encodeURIComponent(nim);
+        }
     }
 
     window.onclick = function(e) {
